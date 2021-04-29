@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class Wolf extends Animal implements Walkable, Swimmable {
     public Wolf() {
-        super(new Timestamp(5 * 1000));
+        super(new Timestamp(10 * 1000));
     }
 
     @Override

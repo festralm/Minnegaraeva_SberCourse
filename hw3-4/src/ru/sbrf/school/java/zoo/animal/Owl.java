@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 public class Owl extends Animal implements Flyable, Walkable {
 
     public Owl() {
-        super(new Timestamp(4 * 1000));
+        super(new Timestamp(6 * 1000));
     }
 
 

@@ -1,8 +1,9 @@
 package ru.sbrf.school.java.zoo;
 
 import ru.sbrf.school.java.zoo.animal.*;
-import ru.sbrf.school.java.zoo.exception.AnimalIsDeadException;
-import ru.sbrf.school.java.zoo.exception.EmptyNameException;
+import ru.sbrf.school.java.zoo.aviary.Aviary;
+import ru.sbrf.school.java.zoo.aviary.AviaryCollection;
+import ru.sbrf.school.java.zoo.exception.*;
 
 import java.sql.Timestamp;
 import java.util.Scanner;
@@ -25,12 +26,58 @@ public class Main {
         }
 
         System.out.println("Проверка исключений: ");
-        System.out.println("Для проверки исключений нужно примерно 5 секунд\n"+
+        System.out.println("Для проверки исключений нужно примерно 10 секунд\n"+
                 "(время жизни волка), чтобы продолжить, наберите '+'");
         Scanner sc = new Scanner(System.in);
         String confirm = sc.nextLine();
         if (confirm.equals("+")) {
             testExceptions(wolf, owl);
+        }
+        System.out.println();
+
+        System.out.println("Проверка вольера: ");
+        Aviary aviary1 = new Aviary(2);
+        Aviary aviary2 = new Aviary(3);
+        try {
+            aviary1.addAnimal(bear);
+            aviary1.addAnimal(cheetah);
+            aviary1.addAnimal(crocodile);
+        } catch (AnimalAlreadyInAviaryException | AviaryIsFullException e) {
+            System.out.println(e.getMessage());
+        }
+
+        aviary1.removeAnimal(cheetah);
+        try {
+            aviary1.addAnimal(crocodile);
+        } catch (AnimalAlreadyInAviaryException | AviaryIsFullException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            aviary2.addAnimal(elephant);
+            aviary2.addAnimal(owl);
+            aviary2.addAnimal(owl);
+        } catch (AnimalAlreadyInAviaryException | AviaryIsFullException e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println();
+
+
+        System.out.println("Проверка нескольких вольеров: ");
+        AviaryCollection aviaryCollection = new AviaryCollection(2);
+        try {
+            aviaryCollection.addAviary(aviary1);
+            aviaryCollection.addAviary(aviary2);
+            aviaryCollection.addAviary(new Aviary(15));
+        } catch (TooMuchAviariesException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            aviaryCollection.addAnimal(penguin, 2);
+            aviaryCollection.addAnimal(wolf, 3);
+        } catch (AnimalAlreadyInAviaryException | AviaryDoesNotExistsException | AviaryIsFullException e) {
+            System.out.println(e.getMessage());
         }
     }
 
