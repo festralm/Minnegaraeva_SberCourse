@@ -1,9 +1,6 @@
 package ru.sbrf.school.java;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class MyInteger2 implements Comparator<MyInteger2>, Comparable<MyInteger2> {
     private int number;
@@ -32,6 +29,19 @@ public class MyInteger2 implements Comparator<MyInteger2>, Comparable<MyInteger2
     @Override
     public int compareTo(MyInteger2 o) {
         return compare(this, o);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyInteger2 that = (MyInteger2) o;
+        return number == that.number && differentDigitsCount == that.differentDigitsCount;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number, differentDigitsCount);
     }
 
     @Override

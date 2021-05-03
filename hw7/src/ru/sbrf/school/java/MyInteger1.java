@@ -2,6 +2,7 @@ package ru.sbrf.school.java;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class MyInteger1 implements Comparator<MyInteger1>, Comparable<MyInteger1> {
     private int number;
@@ -33,6 +34,19 @@ public class MyInteger1 implements Comparator<MyInteger1>, Comparable<MyInteger1
     @Override
     public int compareTo(MyInteger1 o) {
         return compare(this, o);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyInteger1 that = (MyInteger1) o;
+        return number == that.number && primeNumbersCount == that.primeNumbersCount;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number, primeNumbersCount);
     }
 
     @Override
@@ -68,5 +82,8 @@ public class MyInteger1 implements Comparator<MyInteger1>, Comparable<MyInteger1
         System.out.println(Arrays.toString(arr));
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
+
+        MyInteger1 n6 = new MyInteger1(2 * 3);
+        MyInteger1 n7 = new MyInteger1(n2);
     }
 }
