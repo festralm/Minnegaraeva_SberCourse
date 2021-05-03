@@ -4,17 +4,27 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class MyInteger1 implements Comparator<MyInteger1>, Comparable<MyInteger1> {
+public class MyInteger1 implements Comparable<MyInteger1> {
     private int number;
-    private int primeNumbersCount;
 
     public MyInteger1(int number) {
         this.number = number;
-        for (int i = 2; i <= number / 2; i++) {
-            if (number % i == 0 && isPrime(i)) {
+    }
+
+    @Override
+    public int compareTo(MyInteger1 o) {
+        int result = Integer.compare(this.getPrimeNumbersCount(), o.getPrimeNumbersCount());
+        return result == 0 ? Integer.compare(this.number, o.getNumber()) : result;
+    }
+
+    private int getPrimeNumbersCount() {
+        int primeNumbersCount = 0;
+        for (int i = 2; i <= this.number / 2; i++) {
+            if (this.number % i == 0 && isPrime(i)) {
                 primeNumbersCount++;
             }
         }
+        return primeNumbersCount;
     }
 
     private boolean isPrime(int num) {
@@ -28,25 +38,16 @@ public class MyInteger1 implements Comparator<MyInteger1>, Comparable<MyInteger1
     }
 
     @Override
-    public int compare(MyInteger1 o1, MyInteger1 o2) {
-        return Integer.compare(o1.getPrimeNumbersCount(), o2.getPrimeNumbersCount());
-    }
-    @Override
-    public int compareTo(MyInteger1 o) {
-        return compare(this, o);
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MyInteger1 that = (MyInteger1) o;
-        return number == that.number && primeNumbersCount == that.primeNumbersCount;
+        return number == that.number;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(number, primeNumbersCount);
+        return Objects.hash(number);
     }
 
     @Override
@@ -58,14 +59,10 @@ public class MyInteger1 implements Comparator<MyInteger1>, Comparable<MyInteger1
         return number;
     }
 
-    public int getPrimeNumbersCount() {
-        return primeNumbersCount;
-    }
-
     public static void main(String[] args) {
-        int n1 = 2 * 3 * 5;
+        int n1 = 5 * 5 * 7 * 7 * 11 * 11;
         int n2 = 2 * 3;
-        int n3 = 5 * 5 * 7 * 7 * 11 * 11;
+        int n3 = 2 * 3 * 5;
         int n4 = 7 * 13 * 2 * 43;
 
         MyInteger1[] arr = new MyInteger1[] {new MyInteger1(n1),
@@ -82,8 +79,5 @@ public class MyInteger1 implements Comparator<MyInteger1>, Comparable<MyInteger1
         System.out.println(Arrays.toString(arr));
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
-
-        MyInteger1 n6 = new MyInteger1(2 * 3);
-        MyInteger1 n7 = new MyInteger1(n2);
     }
 }
