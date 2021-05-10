@@ -1,7 +1,6 @@
-package ru.sbrf.school.java;
+package ru.sbrf.school.java.homework;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Objects;
 
 public class MyInteger1 implements Comparable<MyInteger1> {
