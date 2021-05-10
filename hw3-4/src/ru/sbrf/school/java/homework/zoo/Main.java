@@ -1,11 +1,10 @@
-package ru.sbrf.school.java.zoo;
+package ru.sbrf.school.java.homework.zoo;
 
-import ru.sbrf.school.java.zoo.animal.*;
-import ru.sbrf.school.java.zoo.aviary.Aviary;
-import ru.sbrf.school.java.zoo.aviary.AviaryCollection;
-import ru.sbrf.school.java.zoo.exception.*;
+import ru.sbrf.school.java.homework.zoo.animal.*;
+import ru.sbrf.school.java.homework.zoo.aviary.Aviary;
+import ru.sbrf.school.java.homework.zoo.aviary.AviaryCollection;
+import ru.sbrf.school.java.homework.zoo.exception.*;
 
-import java.sql.Timestamp;
 import java.util.Scanner;
 
 public class Main {

@@ -1,10 +1,10 @@
-package ru.sbrf.school.java.zoo.aviary;
+package ru.sbrf.school.java.homework.zoo.aviary;
 
-import ru.sbrf.school.java.zoo.animal.Animal;
-import ru.sbrf.school.java.zoo.exception.AnimalAlreadyInAviaryException;
-import ru.sbrf.school.java.zoo.exception.AviaryDoesNotExistsException;
-import ru.sbrf.school.java.zoo.exception.AviaryIsFullException;
-import ru.sbrf.school.java.zoo.exception.TooMuchAviariesException;
+import ru.sbrf.school.java.homework.zoo.animal.Animal;
+import ru.sbrf.school.java.homework.zoo.exception.AnimalAlreadyInAviaryException;
+import ru.sbrf.school.java.homework.zoo.exception.AviaryDoesNotExistsException;
+import ru.sbrf.school.java.homework.zoo.exception.AviaryIsFullException;
+import ru.sbrf.school.java.homework.zoo.exception.TooMuchAviariesException;
 
 import java.util.ArrayList;
 

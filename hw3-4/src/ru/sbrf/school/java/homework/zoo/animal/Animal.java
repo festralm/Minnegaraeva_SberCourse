@@ -1,7 +1,7 @@
-package ru.sbrf.school.java.zoo.animal;
+package ru.sbrf.school.java.homework.zoo.animal;
 
-import ru.sbrf.school.java.zoo.exception.AnimalIsDeadException;
-import ru.sbrf.school.java.zoo.exception.EmptyNameException;
+import ru.sbrf.school.java.homework.zoo.exception.AnimalIsDeadException;
+import ru.sbrf.school.java.homework.zoo.exception.EmptyNameException;
 
 import java.sql.Timestamp;
 

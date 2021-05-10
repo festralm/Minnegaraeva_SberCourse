@@ -1,4 +1,4 @@
-package ru.sbrf.school.java.zoo.animal;
+package ru.sbrf.school.java.homework.zoo.animal;
 
 public interface FastRunnable {
     default void run() {

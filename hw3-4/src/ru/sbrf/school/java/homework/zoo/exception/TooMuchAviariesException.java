@@ -1,6 +1,6 @@
-package ru.sbrf.school.java.zoo.exception;
+package ru.sbrf.school.java.homework.zoo.exception;
 
-import ru.sbrf.school.java.zoo.aviary.Aviary;
+import ru.sbrf.school.java.homework.zoo.aviary.Aviary;
 
 public class TooMuchAviariesException extends Exception {
     public TooMuchAviariesException(Aviary aviary) {

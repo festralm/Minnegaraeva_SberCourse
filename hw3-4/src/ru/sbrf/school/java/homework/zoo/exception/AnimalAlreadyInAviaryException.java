@@ -1,6 +1,6 @@
-package ru.sbrf.school.java.zoo.exception;
+package ru.sbrf.school.java.homework.zoo.exception;
 
-import ru.sbrf.school.java.zoo.animal.Animal;
+import ru.sbrf.school.java.homework.zoo.animal.Animal;
 
 public class AnimalAlreadyInAviaryException extends Exception{
     public AnimalAlreadyInAviaryException(Animal animal) {

@@ -1,4 +1,4 @@
-package ru.sbrf.school.java.zoo.exception;
+package ru.sbrf.school.java.homework.zoo.exception;
 
 public class AnimalIsDeadException extends Exception {
     public AnimalIsDeadException(String message) {

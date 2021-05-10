@@ -1,7 +1,4 @@
-package ru.sbrf.school.java.zoo.animal;
-
-import java.util.ArrayList;
-import java.util.List;
+package ru.sbrf.school.java.homework.zoo.animal;
 
 public interface Swimmable {
     default void swim() {

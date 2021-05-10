@@ -1,4 +1,4 @@
-package ru.sbrf.school.java.zoo.exception;
+package ru.sbrf.school.java.homework.zoo.exception;
 
 public class AviaryDoesNotExistsException extends Exception {
     public AviaryDoesNotExistsException(int number) {
