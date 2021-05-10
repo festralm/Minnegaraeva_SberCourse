@@ -1,7 +1,6 @@
-package ru.sbrf.school.java;
+package ru.sbrf.school.java.homework;
 
 import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
 import java.util.function.Supplier;
 
 public class SwimmerExample {

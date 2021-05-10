@@ -1,7 +1,7 @@
-package ru.sbrf.school.java;
+package ru.sbrf.school.java.homework;
 
-import ru.sbrf.school.java.interfaces.QuadFunction;
-import ru.sbrf.school.java.interfaces.TriFunction;
+import ru.sbrf.school.java.homework.interfaces.QuadFunction;
+import ru.sbrf.school.java.homework.interfaces.TriFunction;
 
 public class InterfacesExample {
     public static void main(String[] args) {
