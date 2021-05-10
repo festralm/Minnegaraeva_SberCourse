@@ -1,4 +1,4 @@
-package ru.sbrf.school.java;
+package ru.sbrf.school.java.homework;
 
 public class MyIntegerExample {
     public static void main(String[] args) {

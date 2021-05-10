@@ -1,4 +1,4 @@
-package ru.sbrf.school.java;
+package ru.sbrf.school.java.lesson;
 
 import java.util.Iterator;
 

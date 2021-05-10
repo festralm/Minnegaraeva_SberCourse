@@ -1,4 +1,4 @@
-package ru.sbrf.school.java;
+package ru.sbrf.school.java.lesson;
 
 public class Sentence2Example {
     public static void main(String[] args) {
