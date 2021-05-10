@@ -1,4 +1,4 @@
-package ru.sbrf.school.java;
+package ru.sbrf.school.java.homework;
 
 import java.util.ArrayList;
 import java.util.List;
