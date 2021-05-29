@@ -1,0 +1,83 @@
+{
+        "runner": {
+            "name": "Иван",
+            "lastname": "Иванов",
+            "age": 30
+        },
+        "employees": [
+            {
+                "name": "Иван",
+                "lastname": "Иванов",
+                "age": 30
+            },
+            {
+                "name": "Иван",
+                "lastname": "Иванов",
+                "age": 30
+            },
+            {
+                "name": "Иван",
+                "lastname": "Иванов",
+                "age": 30
+            }
+        ],
+        "name": "Название департамента",
+        "children": [
+            {
+                "runner": {
+                    "name": "Иван",
+                    "lastname": "Иванов",
+                    "age": 30
+                },
+                "employees": [
+                    {
+                        "name": "Иван",
+                        "lastname": "Иванов",
+                        "age": 30
+                    },
+                    {
+                        "name": "Иван",
+                        "lastname": "Иванов",
+                        "age": 30
+                    },
+                    {
+                        "name": "Иван",
+                        "lastname": "Иванов",
+                        "age": 30
+                    }
+                ],
+                "name": "Название департамента",
+                "children": [
+
+                ]
+            },
+            {
+                "runner": {
+                    "name": "Иван",
+                    "lastname": "Иванов",
+                    "age": 30
+                },
+                "employees": [
+                    {
+                        "name": "Иван",
+                        "lastname": "Иванов",
+                        "age": 30
+                    },
+                    {
+                        "name": "Иван",
+                        "lastname": "Иванов",
+                        "age": 30
+                    },
+                    {
+                        "name": "Иван",
+                        "lastname": "Иванов",
+                        "age": 30
+                    }
+                ],
+                "name": "Название департамента",
+                "children": [
+
+                ]
+            }
+        ]
+    }
